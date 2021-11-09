@@ -580,6 +580,31 @@ li {
   left: 17px;
 }
 
+/* waiting */
+
+.waiting {
+  position: absolute;
+  bottom: 32px;
+  left: 120px;
+  z-index: 1;
+  /* display: none; */
+}
+
+.round {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #fff;
+  opacity: 0.5;
+  display: inline-block;
+}
+
+.round1,
+.round2,
+.round3 {
+  display: none;
+}
+
 /* Modal */
 
 .modal {
@@ -652,7 +677,6 @@ li {
 .navContainer ul li:hover {
   background: #31c8f3;
 }
-
 a {
   text-decoration: none;
   color: #fff;

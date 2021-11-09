@@ -28,8 +28,27 @@ const banner = document.querySelector("#banner");
 
 const fourthSlide = document.querySelector(".containerOfFourthSlide");
 
+// Selecting an element
+const opacity1 = document.querySelector(".round1");
+
+const opacity2 = document.querySelector(".round2");
+
+const opacity3 = document.querySelector(".round3");
+
 fourthSlide.addEventListener("mouseover", function (e) {
   e.preventDefault();
+
+  setTimeout(() => {
+    opacity1.style.display = "inline-block";
+  }, 0000);
+
+  setTimeout(() => {
+    opacity2.style.display = "inline-block";
+  }, 1000);
+
+  setTimeout(() => {
+    opacity3.style.display = "inline-block";
+  }, 2000);
 
   setTimeout(() => {
     modal.style.display = "block";
@@ -40,17 +59,15 @@ fourthSlide.addEventListener("mouseover", function (e) {
 //the button to opens the modal
 const btn = document.querySelector(".rolloverBtn");
 
-// When the user clicks on the button, open the modal
 btn.addEventListener("click", function (e) {
   e.preventDefault();
   banner.style.display = "none";
   modal.style.display = "block";
 });
 
-// Get the <span> element that closes the modal
+// function to close a modal
 const span = document.querySelector(".close");
 
-// When the user clicks on <span> (x), close the modal
 span.addEventListener("click", function () {
   modal.style.display = "none";
   banner.style.display = "block";
