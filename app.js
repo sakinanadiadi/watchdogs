@@ -24,18 +24,18 @@ const modal = document.querySelector("#myModal");
 
 const banner = document.querySelector("#banner");
 
-// On hover
+// On mouseOver wait for 3 seconds
 
 const fourthSlide = document.querySelector(".containerOfFourthSlide");
 
-// fourthSlide.addEventListener("mouseover", function (e) {
-//   e.preventDefault();
+fourthSlide.addEventListener("mouseover", function (e) {
+  e.preventDefault();
 
-//   setTimeout(() => {
-//     modal.style.visibility = "visible";
-//     banner.style.visibility = "hidden";
-//   }, 3000);
-// });
+  setTimeout(() => {
+    modal.style.display = "block";
+    banner.style.display = "none";
+  }, 3000);
+});
 
 //the button to opens the modal
 const btn = document.querySelector(".rolloverBtn");
@@ -54,11 +54,4 @@ const span = document.querySelector(".close");
 span.addEventListener("click", function () {
   modal.style.display = "none";
   banner.style.display = "block";
-});
-
-// When the user clicks anywhere outside of the modal, close it
-window.addEventListener("click", function (event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
 });
